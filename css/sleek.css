@@ -1,0 +1,290 @@
+/* TABLE OF CONTENTS */
+/* GRID */
+/* GENERAL STYLES */
+/* HEADINGS */
+/* INLINE STYLES */
+/* LIST STYLES */
+/* TABLE STYLING */
+/* FORMS */
+/* BUTTONS */
+/* HELPER CLASSES */
+
+/* GRID */
+*, 
+*:after, 
+*:before {
+  box-sizing: border-box;
+}
+.row {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+[class*='col-'] {
+  width: 100%;
+  float: left;
+  padding: 0;
+}
+
+/* mobile (iphone 5)landscape (min-width 580px) */
+@media screen and (min-width: 540px) {
+  [class*='col-'] {
+    width: 50%;
+    padding-right: 30px;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 759px){  
+  [class*='col-']:nth-of-type(even) {
+    padding-right: 0;
+  }
+}
+
+/* tablet (regular ipad) portrait (min-width 760px) */
+@media screen and (min-width: 760px) {
+  [class*='col-'] {
+    width: 33.33333%;
+    padding-right: 20px;
+  }
+  [class*='col-']:last-of-type {
+    padding-right: 0;
+  }
+}
+
+/* desktop (min-width 980px)*/
+@media screen and (min-width: 980px) { 
+  .col-1    { width: 8.33333%; }
+  .col-2    { width: 16.66667%;}
+  .col-3    { width: 25%;      }
+  .col-4    { width: 33.33333%;}
+  .col-5    { width: 41.66667%;}
+  .col-6    { width: 50%;      }
+  .col-7    { width: 58.33333%;}
+  .col-8    { width: 66.66667%;}
+  .col-9    { width: 75%;      }
+  .col-10   { width: 83.33333%;}
+  .col-11   { width: 91.66667%;} 
+  .col-12   { width: 100%;     }
+  
+  .row {
+    padding: 0 10px;
+  }
+}
+
+/* GENERAL STYLES */
+body, select, input, textarea, button {
+  font-size: 1.0em;
+  line-height: 1.5em;
+  font-weight: 400;
+  font-family: 'Work Sans', sans-serif;
+  color: #333;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  line-height: 1em;
+}
+h1 {font-size: 3em;}
+h2 {font-size: 2.5em;}
+h3 {font-size: 2em;}
+h4 {font-size: 1.5em;}
+h5 {font-size: 1.25em;}
+h6 {font-size: 1em;}
+
+/* INLINE STYLES */
+b, strong {font-weight: 500;}
+a {color: #809fff;}
+code {border: 1px solid #bfbfbf; border-radius: 2px; padding: 5px 10px; margin: auto 5px;}
+.uppercase {text-transform: uppercase;}
+.lowercase {text-transform: lowercase;}
+.capitalize {text-transform: capitalize;}
+address {margin-left: 5px;}
+blockquote {border-left: 1px #bfbfbf solid; padding-left: 5px;}
+
+/* LIST STYLES */
+body ol>ol {list-style-type: lower-alpha}
+
+/* TABLE STYLING */
+table {
+  width: 100%;
+  margin:0;
+  padding:0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table.border {border: 1px solid #d9d9d9;}
+table.striped tr:nth-child(even) {background: #bfbfbf}
+table.striped tr:nth-child(odd) {background: #FFF}
+table tr {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 5px;
+}
+table th, table td {
+  padding: 10px;
+  text-align: center;
+}
+table th {
+  border-bottom: 2px solid #d9d9d9;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* resoponsive  table */
+@media screen and (max-width: 600px) {
+  table.tresponsive {border: 0;}
+  table.tresponsive.striped tr:nth-child(even) {background: #FFF}
+  table.tresponsive.striped td:nth-child(even) {background: #d9d9d9}
+  table.tresponsive.striped td:nth-child(odd) {background: #FFF}
+  table.tresponsive thead {display: none;}
+  table.tresponsive tr {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
+    }
+    table.tresponsive td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    border-bottom: 1px dotted #ccc;
+    }
+    table.tresponsive td:last-child {
+    border-bottom: 0;
+    }
+    table.tresponsive td:before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    }
+  }
+
+/* FORMS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #bfbfbf;
+  width: 95%;
+  padding: 5px;
+  margin: 5px;
+}
+
+select {
+  height: 35px;
+}
+
+select[multiple] {
+  height: auto;
+  padding: 5px;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+-webkit-appearance: none;
+   -moz-appearance: none;
+        appearance: none;
+}
+
+textarea {
+  min-height: 65px;
+}
+
+label,
+legend {
+    display: block;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+fieldset {
+  border-left: 1px solid #bfbfbf;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+/* BUTTONS */
+button, 
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  border-radius: 4px;
+  background-color: #FFF;
+  box-shadow: none;
+  border: 1px solid #bfbfbf;
+  margin: 10px auto;
+}
+button:hover, 
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  border: 1px solid #809fff;
+}
+button:active, 
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+  background-color: #809fff;
+}
+.btnxsmall {
+  font-size: 0.75em;
+  padding: 5px 10px;
+}
+.btnsmall, 
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  font-size: 1em;
+  padding: 5px 20px;
+}
+.btnmedium {
+  font-size: 1.25em;
+  padding: 5px 30px;
+}
+.btnlarge {
+  font-size: 1.5em;
+  padding: 5px 50px;
+}
+.fa {width: 1.5em; text-align: center;}
+
+/* HELPER CLASSES */
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+}
+.clr {
+  clear: both;
+}
+.center {
+  position: relative;
+  top: 50%;
+}
+
+@media print {    
+  .noPrint {
+    display: none !important;
+  }
+}
