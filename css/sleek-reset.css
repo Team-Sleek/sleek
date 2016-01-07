@@ -1,0 +1,59 @@
+/* SLEEK RESET */
+
+article,
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header,
+hgroup,
+menu, 
+nav, 
+section { 
+  display: block;
+}
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+img, q, samp,
+small, strong,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  line-height: 1;
+}
+dl, dt, dd, ol, ul, li {
+  list-style-position: inside;
+}
+nav ul {
+  list-style: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input, 
+select {
+  vertical-align: middle;
+}
