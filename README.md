@@ -1,6 +1,6 @@
 #Sleek Web Development Framework 
 ####Built by the Sleek Team for the SDCE Front End Web Developer Certificate Program
-#### The Team is made up of [Aurelia Yee](https://github.com/aureliayee), [Joe Ferrara](https://github.com/jferrarasd), and [Johann Billar](https://github.com/JohannBillar)
+#### The Team is made up of [Aurelia Yee](https://github.com/aureliayee), and [Johann Billar](https://github.com/JohannBillar)
 
 The framework comes with:
 * CSS reset
