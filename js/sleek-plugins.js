@@ -12,7 +12,6 @@
                 height: '100%',
                 minHeight: '100%',
                 margin: '0 0',
-                paddingTop: '2%'
             });
             $slideshow.find('img').css({
                 maxWidth: '100%',
@@ -190,6 +189,10 @@
                 borderRadius: "5px 5px 0 0",
                 height: "40px"
             });
+            $tabsval.delegate('a', 'click', function(e){
+                 e.preventDefault();
+                 return false;
+            });  
             $tabsval.find("a").each(function () {
                 $(this).on("click", function () {
                     $tabsval.find(".activetxt").hide()
