@@ -64,7 +64,7 @@
                 var slideSelect = imageCache[slideNumber].src;
 
             $('.slide').fadeOut(1000, function(){
-                $('#slide').attr("src", slideSelect).fadeIn(1000);
+                $('.slide').attr("src", slideSelect).fadeIn(1000);
             });
 
             //toggles navigation select styles
