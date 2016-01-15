@@ -141,7 +141,8 @@ b,
 strong {
   font-weight: 500;
 }
-a { 
+a, 
+footer p { 
   color: #809fff;
 }
 code {
@@ -542,7 +543,7 @@ input[type=checkbox]:checked ~ #menu {
     width:100%;
     color: #FFF;
     -ms-transform: translate(0,-50%); 
-   	-webkit-transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
     transform: translate(0,-50%);
     background-color: rgba(30, 30, 30, 0.05);
 }

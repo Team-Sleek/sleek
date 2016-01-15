@@ -157,57 +157,148 @@
             });
             $tabsval.find("ul").css({
                 listStyleType: "none",
-                height: "50px",
                 backgroundColor: "#d9d9d9",
-                borderRadius: "5px",
-                marginBottom: "0",
-                padding: "10px 0",
-                margin: "5px 5px 15px 5px"
-            });
-            $tabsval.find("li").css({
-                display: "inline"
-            });
-            $tabsval.find("section").css({
-                padding: "0 30px"
+                padding: "10px 0"
             });
             $tabsval.find("a").css({
-                float: "left",
                 textDecoration: "none",
                 color: "#333",
                 backgroundColor: "#fff",
-                border: "1px solid #fff",
-                height: "35px",
                 textAlign: "center",
-                padding: "5px 20px",
-                margin: "0 2px",
                 borderRadius: "5px"
             });
+            function htabs () {
+                $tabsval.find("ul").css({
+                    height: "50px",
+                    borderRadius: "5px",
+                    marginBottom: "0",
+                    marginLeft: "0",
+                    margin: "5px 5px 15px 5px",
+                    float:"none"
+                });
+                $tabsval.find("li").css({
+                    display: "inline",
+                    margin: "0"
+                });
+                $tabsval.find("section").css({
+                    padding: "0 30px",
+                    width: "auto"
+                });
+                $tabsval.find("a").css({
+                    float: "left",
+                    border: "1px solid #fff",
+                    margin: "0 2px",
+                    height: "35px",
+                    borderRadius: "5px",
+                    padding: "5px 20px",
+                    width: "auto"
+                });
 
-            $tabsval.find("p").hide();
-            $tabsval.find(".activetxt").show();
-            $tabsval.find("a:first").css({
-                borderRadius: "5px 5px 0 0",
-                height: "40px"
-            });
-            $tabsval.delegate('a', 'click', function(e){
-                 e.preventDefault();
-                 return false;
-            });  
-            $tabsval.find("a").each(function () {
-                $(this).on("click", function () {
-                    $tabsval.find(".activetxt").hide()
-                                       .removeClass();
-                    $tabsval.find("a").css({
-                        borderRadius: "5px",
-                        height: "35px"
-                    });
-                    $(this.hash).show()
-                                .addClass("activetxt");
-                    $(this).css({
-                        borderRadius: "5px 5px 0 0",
-                        height: "40px"
+                $tabsval.find("p").hide();
+                $tabsval.find(".activetxt").show();
+                $tabsval.find("a.activetab").css({
+                    borderRadius: "5px 5px 0 0",
+                    height: "40px"
+                });
+                $tabsval.delegate('a', 'click', function(e){
+                     e.preventDefault();
+                     return false;
+                });
+                $tabsval.find("a").each(function () {
+                    $(this).on("click", function () {
+                        $tabsval.find(".activetxt").hide()
+                                           .removeClass();
+                        $tabsval.find(".activetab").removeClass();
+                        $tabsval.find("a").css({
+                            borderRadius: "5px",
+                            height: "35px"
+                        });
+                        $(this.hash).show()
+                                    .addClass("activetxt");
+                        $(this).addClass("activetab")
+                        .css({
+                            borderRadius: "5px 5px 0 0",
+                            height: "40px"
+                        });
                     });
                 });
+            };
+            function vtabs () {
+                $tabsval.css({
+                   float: "left" 
+                });
+                $tabsval.find("ul").css({
+                    height: "auto",
+                    borderRadius: "5px 0 0 5px",
+                    marginBottom: "0",
+                    marginLeft: "5px",
+                    padding: "10px 0",
+                    margin: "0",
+                    float: "left"
+                });
+                $tabsval.find("li").css({
+                    display: "block", 
+                    marginTop: "2px",
+                    marginBottom: "15px",
+                    marginLeft: "5px",
+                });
+                $tabsval.find("section").css({
+                    paddingRight: "0",
+                    paddingLeft:"100px",
+                    width: "100%"
+                });
+                $tabsval.find("a").css({
+                    float: "none",
+                    padding: "5px 20px",
+                    marginTop: "2px",
+                    borderRight: "3px solid #d9d9d9",
+                    marginRight: "0",
+                    borderRadius: "5px",
+                    display: "block",
+                    width: "100%"
+                });
+                $tabsval.find("p").hide();
+                $tabsval.find(".activetxt").show();
+                $tabsval.find("a.activetab").css({
+                    borderRight: "3px solid #fff",
+                    borderRadius: "5px 0 0 5px"
+                });
+                $tabsval.delegate('a', 'click', function(e){
+                     e.preventDefault();
+                     return false;
+                });
+                $tabsval.find("a").each(function () {
+                    $(this).on("click", function () {
+                        $tabsval.find(".activetxt").hide()
+                                           .removeClass();
+                        $tabsval.find(".activetab").removeClass();
+                        $tabsval.find("a").css({
+                             borderRight: "3px solid #d9d9d9",
+                             borderRadius: "5px",
+                             marginRight: "0"
+                        });
+                        $(this.hash).show()
+                                    .addClass("activetxt");
+                        $(this).addClass("activetab")
+                        .css({
+                            borderRight: "3px solid #fff",
+                            borderRadius: "5px 0 0 5px",
+                            marginRight: "0"
+                        });
+                    });
+                });
+            };
+            if ($(window).width() <= 760) {
+                vtabs();
+            } else {
+                htabs();
+            }
+            $(window).resize(function(){
+                if ($(window).width() <= 760) {
+                    vtabs();
+                } else {
+                    htabs();
+                }
             });
         });
     };
