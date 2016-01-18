@@ -572,7 +572,15 @@ input[type=checkbox]:checked ~ #menu {
   height: auto;
 }
 .clr {
-  clear: both;
+  content: "";
+  display: table;
+  clear: both; }
+}
+.pull-right {
+  float: right; 
+}
+.pull-left {
+  float: left; 
 }
 .center {
   position: relative;
