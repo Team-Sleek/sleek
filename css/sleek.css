@@ -193,7 +193,25 @@ address {margin-left: 5px;}
 blockquote {border-left: 1px #bfbfbf solid; padding-left: 5px;}
 
 /* list styles */
-body ol>ol {list-style-type: lower-alpha}
+body ol>ol {
+  list-style-type: lower-alpha;
+}
+li {
+  margin-bottom: 0.5em;
+}
+ul, ol {
+  margin-bottom: 0;
+}
+ul > ul, ol > ol {
+  margin-left: 20px;
+}
+fieldset {
+  border-left: 1px solid #bfbfbf;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  padding-left: 5px;
+}
 
 /* table styling */
 table {
@@ -261,7 +279,6 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  height: 20px;
   border-radius: 4px;
   border: 1px solid #bfbfbf;
   width: 95%;
@@ -435,10 +452,10 @@ input[type="button"] {
   text-align: center;
   display: none;
 }
-input[type=checkbox] {
+.navbar input[type=checkbox] {
   display: none;
 }
-input[type=checkbox]:checked ~ #menu {
+.navbar input[type=checkbox]:checked ~ #menu {
   display: block;
 }
 .navbar span.mobile-show {
